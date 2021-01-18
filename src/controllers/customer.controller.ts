@@ -1,4 +1,5 @@
-// ---------- ADD IMPORTS -> SECURITY JWT -------------
+// ---------- ADD IMPORTS -> SECURITY JWS -------------
+import {authenticate} from '@loopback/authentication';
 import {
   Count,
   CountSchema,
@@ -10,23 +11,18 @@ import {
 import {
   del, get,
   getModelSchemaRef, param,
-
-
   patch, post,
-
-
-
-
   put,
-
   requestBody
 } from '@loopback/rest';
 import {Customer} from '../models';
 import {CustomerRepository} from '../repositories';
 
+// ------------------------------------
+
 
 // // ------------------------------------
-// @authenticate('jwt') // <---- Apply the @authenticate decorator at the class level
+@authenticate('jwt') // <---- Apply the @authenticate decorator at the class level
 export class CustomerController {
   constructor(
     @repository(CustomerRepository)
