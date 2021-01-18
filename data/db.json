@@ -1,0 +1,21 @@
+{
+  "ids": {
+    "Customer": 5,
+    "User": 3,
+    "UserCredentials": 3
+  },
+  "models": {
+    "Customer": {
+      "3": "{\"name\":\"Alejandro\",\"phone\":\"098123456\",\"id\":3}",
+      "4": "{\"name\":\"Mirna Graña\",\"phone\":\"099111222\",\"id\":4}"
+    },
+    "User": {
+      "7f0f892a-d575-410b-a928-6779b9b8c30a": "{\"id\":\"7f0f892a-d575-410b-a928-6779b9b8c30a\",\"realm\":\"Sebastian\",\"username\":\"sebamawa\",\"email\":\"sebamawa@hotmail.com\",\"emailVerified\":true,\"verificationToken\":\"\"}",
+      "c7914718-7501-44d9-a2a7-3d627d143789": "{\"id\":\"c7914718-7501-44d9-a2a7-3d627d143789\",\"realm\":\"Sebastian\",\"username\":\"sebamawa\",\"email\":\"sebamawa@hotmail.com\",\"emailVerified\":true,\"verificationToken\":\"\"}"
+    },
+    "UserCredentials": {
+      "1046f0a0-e737-45d9-bb50-ffc9164d9dfe": "{\"id\":\"1046f0a0-e737-45d9-bb50-ffc9164d9dfe\",\"password\":\"$2a$10$miXHkiqRKFifwyhPE1.R2uCdTEtyGBMyr/Culcl9jK09RnM9lA8IW\",\"userId\":\"7f0f892a-d575-410b-a928-6779b9b8c30a\"}",
+      "a12fd8c1-07e2-4e29-8ff3-5294330c3f3b": "{\"id\":\"a12fd8c1-07e2-4e29-8ff3-5294330c3f3b\",\"password\":\"$2a$10$4Rj9PUUvX8dgiUjkiztksOCx/hmVQoJE8NTzFOitNEeX/nG34LTie\",\"userId\":\"c7914718-7501-44d9-a2a7-3d627d143789\"}"
+    }
+  }
+}
