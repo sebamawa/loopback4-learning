@@ -80,6 +80,9 @@ export class UserController {
                 token: {
                   type: 'string',
                 },
+                user: {
+                  type: User,
+                },
               },
             },
           },
@@ -89,15 +92,17 @@ export class UserController {
   })
   async login(
     @requestBody(CredentialsRequestBody) credentials: Credentials,
-  ): Promise<{token: string}> {
+  ): Promise<{token: string, user: User}> {
     // ensure the user exists, and the password is correct
     const user = await this.userService.verifyCredentials(credentials);
     // convert a User object into a UserProfile object (reduced set of properties)
+    // console.log(user);
     const userProfile = this.userService.convertToUserProfile(user);
 
     // create a JSON Web Token based on the user profile
     const token = await this.jwtService.generateToken(userProfile);
-    return {token};
+    // const username = "usuario";
+    return {token, user};
   }
 
   @authenticate('jwt')
