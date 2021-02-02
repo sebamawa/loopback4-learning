@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {Payment} from './payment.model';
 
 @model()
 export class Customer extends Entity {
@@ -25,6 +26,8 @@ export class Customer extends Entity {
   })
   address?: string;
 
+  @hasMany(() => Payment)
+  payments: Payment[];
 
   constructor(data?: Partial<Customer>) {
     super(data);
@@ -35,4 +38,6 @@ export interface CustomerRelations {
   // describe navigational properties here
 }
 
-export type CustomerWithRelations = Customer & CustomerRelations;
+export type PruebaEliminarWithRelations = Customer & CustomerRelations;
+
+
